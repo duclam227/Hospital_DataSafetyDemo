@@ -1,0 +1,12 @@
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\BUS_HospitalManagement.dll.config
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\BUS_HospitalManagement.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\BUS_HospitalManagement.pdb
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\DAO_HospitalManagement.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\DAO_HospitalManagement.pdb
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\bin\Debug\DAO_HospitalManagement.dll.config
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\obj\Debug\BUS_HospitalManagement.csprojAssemblyReference.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\obj\Debug\BUS_HospitalManagement.csproj.CoreCompileInputs.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\obj\Debug\BUS_HospitalManagement.csproj.CopyComplete
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\obj\Debug\BUS_HospitalManagement.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\HospitalManagement\BUS_HospitalManagement\obj\Debug\BUS_HospitalManagement.pdb

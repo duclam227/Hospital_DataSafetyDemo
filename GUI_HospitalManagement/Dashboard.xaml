@@ -1,0 +1,68 @@
+﻿<Window x:Class="GUI_HospitalManagement.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_HospitalManagement"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        Title="Dashboard" 
+        Height="600" Width="900" 
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="20"
+                   Margin="5 5 0 0"
+                   Opacity="0.5"
+                   Grid.Row="0"
+                   IsHitTestVisible="False">Quản lý bệnh viện TTĐNN</TextBlock>
+
+        <TabControl Grid.Row="1"
+                    Style="{DynamicResource TabControlBaseStyle}"
+                    TabStripPlacement="Left">
+            <TabItem Header="Quản lý user"
+                     Width="150">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Stretch"
+                                Grid.Row="0"/>
+
+                    <Frame x:Name="UserFrame"
+                           NavigationUIVisibility="Hidden"
+                           VerticalAlignment="Stretch"
+                           Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            
+            <TabItem Header="Quản lý role">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Stretch"
+                                Grid.Row="0"/>
+                    <Frame x:Name="RoleFrame"
+                           NavigationUIVisibility="Hidden"
+                           VerticalAlignment="Stretch"
+                           Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        
+    </Grid>
+</Window>
