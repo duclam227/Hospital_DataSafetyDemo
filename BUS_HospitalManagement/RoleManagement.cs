@@ -169,5 +169,28 @@ namespace BUS_HospitalManagement
                 throw ex;
             }
         }
+
+        public static string GetUserDefaultRole()
+        {
+            string result = "";
+            try
+            {
+                DataTable dt = DAO_HospitalManagement.RoleManagement.Instance.GetUserRoles();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string name = row["TABLE_NAME"].ToString();
+                    //navigate roles
+                    if (name == "DOCTOR")
+                        return name;
+                    else if (name == "DBA")
+                        return name;
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

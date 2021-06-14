@@ -12,7 +12,7 @@ namespace DAO_HospitalManagement
     public class RoleManagement : DBConnect
     {
         private static RoleManagement _instance = null;
-        public RoleManagement Instance
+        public static RoleManagement Instance
         {
             get
             {
@@ -301,5 +301,30 @@ namespace DAO_HospitalManagement
                 throw ex;
             }
         }
+
+        public DataTable GetUserRoles()
+        {
+            //Instantiate OracleDataAdapter to create DataSet
+            OracleDataAdapter rolesAdapter = new OracleDataAdapter();
+
+            //Fetch roles
+            try
+            {
+                rolesAdapter.SelectCommand = new OracleCommand($"select * from user_role_privs", _conn);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            //Instantiate DataSet object
+            DataTable dt = new DataTable();
+
+            //Fill the DataSet with data from database table
+            rolesAdapter.Fill(dt);
+
+            return dt;
+        }
+
     }
 }

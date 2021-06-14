@@ -58,10 +58,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBAPage.xaml.cs">
+      <DependentUpon>DBAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPage.xaml.cs">
+      <DependentUpon>DoctorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionPage.xaml.cs">
+      <DependentUpon>ReceptionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewDataSet.xaml.cs">
       <DependentUpon>ViewDataSet.xaml</DependentUpon>
     </Compile>
     <Page Include="Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DBAPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoctorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,6 +97,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ReceptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ViewDataSet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

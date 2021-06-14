@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\Hospital_DataSafetyDemo\GUI_HospitalManagement\obj\Debug\
+D:\Kem\Documents\GitHub\Hospital_DataSafetyDemo\GUI_HospitalManagement\obj\Debug\
 GUI_HospitalManagement
 none
 false
 DEBUG;TRACE
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKII\AT&BMTT\Do an\Hospital_DataSafetyDemo\GUI_HospitalManagement\App.xaml
-3271561601
+D:\Kem\Documents\GitHub\Hospital_DataSafetyDemo\GUI_HospitalManagement\App.xaml
+6533854179
 
-81316098614
-151147597485
-Dashboard.xaml;MainWindow.xaml;ViewDataSet.xaml;
+111582995145
+151706997526
+Dashboard.xaml;DBAPage.xaml;DoctorPage.xaml;MainWindow.xaml;ReceptionPage.xaml;ViewDataSet.xaml;
 
 True
 

@@ -22,47 +22,8 @@
                    Grid.Row="0"
                    IsHitTestVisible="False">Quản lý bệnh viện TTĐNN</TextBlock>
 
-        <TabControl Grid.Row="1"
-                    Style="{DynamicResource TabControlBaseStyle}"
-                    TabStripPlacement="Left">
-            <TabItem Header="Quản lý user"
-                     Width="150">
-                <Grid>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="40"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Stretch"
-                                Grid.Row="0"/>
-
-                    <Frame x:Name="UserFrame"
-                           NavigationUIVisibility="Hidden"
-                           VerticalAlignment="Stretch"
-                           Grid.Row="1"/>
-                </Grid>
-            </TabItem>
-            
-            <TabItem Header="Quản lý role">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="40"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Stretch"
-                                Grid.Row="0"/>
-                    <Frame x:Name="RoleFrame"
-                           NavigationUIVisibility="Hidden"
-                           VerticalAlignment="Stretch"
-                           Grid.Row="1"/>
-                </Grid>
-            </TabItem>
-        </TabControl>
-
+        <Frame x:Name="RoleFrame"
+               Grid.Row="1"></Frame>
         
     </Grid>
 </Window>
