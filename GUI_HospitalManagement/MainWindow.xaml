@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
     <Grid>
-        <StackPanel Width="450" VerticalAlignment="Center">
+        <StackPanel Width="400" VerticalAlignment="Center">
             <TextBlock FontSize="20"
                        FontWeight="Bold"
                        HorizontalAlignment="Center">Demo bảo mật dữ liệu: Quản lý bệnh viện</TextBlock>

@@ -33,13 +33,14 @@ namespace GUI_HospitalManagement
             try
             {
                 BUS_HospitalManagement.Utilities.Login(TextBox_Username.Text, TextBox_Password.Password);
-                Dashboard dashboard = new Dashboard();
+                Dashboard dashboard = new Dashboard(TextBox_Username.Text);
                 dashboard.Show();
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                //BUS_HospitalManagement.Utilities.CloseConnection();
             }
 
         }

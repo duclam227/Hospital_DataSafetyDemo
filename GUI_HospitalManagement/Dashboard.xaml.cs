@@ -21,16 +21,26 @@ namespace GUI_HospitalManagement
     /// </summary>
     public partial class Dashboard : Window
     {
+        private string role;
+        private string username;
+
         public Dashboard()
         {
             InitializeComponent();
             DataContext = this;
         }
 
-       
+        public Dashboard(string input)
+        {
+            InitializeComponent();
+            username = input;
+            role = BUS_HospitalManagement.RoleManagement.GetRole();
+            DataContext = this;
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           //
+            MessageBox.Show(role + username);
         }
     }
 }

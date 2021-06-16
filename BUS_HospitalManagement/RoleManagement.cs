@@ -46,6 +46,21 @@ namespace BUS_HospitalManagement
             }
         }
 
+        public static string GetRole()
+        {
+            string result = "";
+
+            DataTable data = DAO_HospitalManagement.RoleManagement.GetRole();
+            if(data.Rows.Count == 0)
+            {
+                return "no role";
+            }
+
+            result = data.Rows[0]["employee_position"].ToString();
+
+            return result;
+        }
+
         public static DataTable ShowRolePrivs(string role)
         {
             try

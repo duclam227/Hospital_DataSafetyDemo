@@ -20,5 +20,10 @@ namespace BUS_HospitalManagement
                 throw ex;
             }
         }
+
+        public static void CloseConnection()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
