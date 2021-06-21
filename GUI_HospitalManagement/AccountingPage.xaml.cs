@@ -18,9 +18,9 @@ namespace GUI_HospitalManagement
     /// <summary>
     /// Interaction logic for ReceptionPage.xaml
     /// </summary>
-    public partial class ReceptionPage : Page
+    public partial class AccountingPage : Page
     {
-        public ReceptionPage()
+        public AccountingPage()
         {
             InitializeComponent();
         }

@@ -8,22 +8,37 @@
         mc:Ignorable="d"
         Title="Dashboard" 
         Height="600" Width="900" 
-        WindowStartupLocation="CenterScreen"
-        WindowState="Maximized" Loaded="Window_Loaded">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="55"/>
             <RowDefinition/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock FontSize="20"
-                   Margin="5 5 0 0"
-                   Opacity="0.5"
-                   Grid.Row="0"
+        <StackPanel Grid.Row="0"
+                   Margin="5 2 0 0">
+            <TextBlock FontSize="20"
+                   Opacity="0.8"
                    IsHitTestVisible="False">Quản lý bệnh viện TTĐNN</TextBlock>
+            <TextBlock Name="WelcomeTextBlock" 
+                       FontSize="13"
+                       Opacity="0.7"
+                       Text=""></TextBlock>
+        </StackPanel>
+        
 
         <Frame x:Name="RoleFrame"
                Grid.Row="1"></Frame>
-        
+
+        <Button Name="LogoutButton" 
+                Content="Đăng xuất"
+                FontSize="10"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Grid.Row="3"
+                Margin="0 0 5 0"
+                Style="{StaticResource ButtonDanger}" Click="LogoutButton_Click"/>
+
     </Grid>
 </Window>

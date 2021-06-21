@@ -40,7 +40,50 @@ namespace GUI_HospitalManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(role + username);
+            //MessageBox.Show(role + username);
+            string welcome = "Xin chào " + username + ", bạn là một ";
+
+            if (username == "atbm" || username == "ATBM")
+            {
+                welcome += "DBA!";
+                WelcomeTextBlock.Text = welcome;
+
+                //show dba
+                DBAPage dba = new DBAPage();
+                RoleFrame.Navigate(dba);
+            }
+            else
+            {
+                switch (role)
+                {
+                    case "accounting":
+                        {
+                            welcome += "Kế toán!";
+                            WelcomeTextBlock.Text = welcome;
+
+                            AccountingPage accounting = new AccountingPage();
+                            RoleFrame.Navigate(accounting);
+                            break;
+                        }
+                    case "doctor":
+                        {
+                            welcome += "Bác sĩ!";
+                            WelcomeTextBlock.Text = welcome;
+
+                            DoctorPage doctor = new DoctorPage();
+                            RoleFrame.Navigate(doctor);
+                            break;
+                        }
+                }
+            }
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            BUS_HospitalManagement.Utilities.CloseConnection();
+            MainWindow main = new MainWindow();
+            this.Close();
+            main.Show();
         }
     }
 }

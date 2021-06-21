@@ -8,12 +8,52 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DBAPage" Background="White">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Margin="25"></TextBox>
-        <Button Grid.Row="1" >Nhập lệnh</Button>
-    </Grid>
+    <TabControl x:Name="DBATabs"
+                Style="{StaticResource TabControlBaseStyle}">
+        <TabItem Name="DBAMainTab"
+                 Header="Quản trị bằng lệnh">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="0.7*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="1">Nhập lệnh:</TextBlock>
+                <TextBox x:Name="commandTextBox"
+                     Grid.Row="2" Grid.ColumnSpan="3"
+                     Grid.Column="1"
+                     BorderThickness="0.5"
+                     BorderBrush="Black"
+                     VerticalContentAlignment="Top"
+                     TextWrapping="Wrap">
+                </TextBox>
+
+                <Button x:Name="RunCommandButton"
+                Grid.Row="3"
+                Grid.Column="3"
+                HorizontalAlignment="right"
+                Margin="0 2 0 0" 
+                Click="RunCommandButton_Click">Nhập lệnh</Button>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="AddPatientTab"
+                 Header="Thêm bệnh nhân">
+            
+            
+        </TabItem>
+    </TabControl>
+    
 </Page>

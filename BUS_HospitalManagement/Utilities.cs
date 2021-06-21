@@ -23,7 +23,7 @@ namespace BUS_HospitalManagement
 
         public static void CloseConnection()
         {
-            throw new NotImplementedException();
+            DAO_HospitalManagement.DBConnect.CloseConnection();
         }
     }
 }

@@ -24,5 +24,11 @@ namespace GUI_HospitalManagement
         {
             InitializeComponent();
         }
+
+        private void RunCommandButton_Click(object sender, RoutedEventArgs e)
+        {
+            string cmd = commandTextBox.Text;
+            MessageBox.Show(cmd);
+        }
     }
 }

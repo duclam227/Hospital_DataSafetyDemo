@@ -35,5 +35,10 @@ namespace DAO_HospitalManagement
             }
             Debug.WriteLine("Connection established (" + _conn.ServerVersion + ")");
         }
+
+        static public void CloseConnection()
+        {
+            _conn.Close();
+        }
     }
 }
