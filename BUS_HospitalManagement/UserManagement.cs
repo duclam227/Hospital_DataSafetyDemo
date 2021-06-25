@@ -322,5 +322,7 @@ namespace BUS_HospitalManagement
                 throw ex;
             }
         }
+
+
     }
 }

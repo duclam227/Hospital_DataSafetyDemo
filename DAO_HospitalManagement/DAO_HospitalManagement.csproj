@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO_CheckupRecord.cs" />
     <Compile Include="DAO_Dept.cs" />
+    <Compile Include="DAO_Employee.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="RoleManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
