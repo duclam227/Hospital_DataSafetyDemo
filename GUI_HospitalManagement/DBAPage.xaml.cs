@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace GUI_HospitalManagement
 {
@@ -28,7 +29,29 @@ namespace GUI_HospitalManagement
         private void RunCommandButton_Click(object sender, RoutedEventArgs e)
         {
             string cmd = commandTextBox.Text;
-            MessageBox.Show(cmd);
+            //MessageBox.Show(cmd);
+
+            try
+            {
+                DataTable dt = BUS_HospitalManagement.UserManagement.RunQuery(cmd);
+                DataReturnGrid.ItemsSource = new DataView(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AddPatientButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                BUS_HospitalManagement.BUS_Dept.AddPatient(NameTextBox.Text, DOBTextBox.Text, AddressTextBox.Text, PhoneTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
