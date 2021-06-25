@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DAO_HospitalManagement
 {
@@ -43,6 +44,66 @@ namespace DAO_HospitalManagement
             {
                 Debug.WriteLine("No Data In DataBase");
             }
+        }
+
+        public static void AddPatient(int id, string name, string dob, string address, string phone)
+        {
+            string cmdText = $"insert into atbm.patient values ({id}, '{name}', '{dob}', '{address}', '{phone}')";
+
+            try
+            {
+                OracleCommand cmd = new OracleCommand(cmdText, _conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
+
+        public static DataTable GetAllPatient()
+        {
+            DataTable result = new DataTable();
+
+            OracleDataAdapter adapter = new OracleDataAdapter();
+
+            //Fetch roles
+            try
+            {
+                adapter.SelectCommand = new OracleCommand($"select * from atbm.patient", _conn);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            //Fill the DataSet with data from database table
+            adapter.Fill(result);
+
+            return result;
+        }
+
+        public static DataTable GetAmount(string tablename)
+        {
+            DataTable result = new DataTable();
+
+            OracleDataAdapter adapter = new OracleDataAdapter();
+
+            //Fetch roles
+            try
+            {
+                adapter.SelectCommand = new OracleCommand($"select count(*) from atbm.{tablename}", _conn);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            //Fill the DataSet with data from database table
+            adapter.Fill(result);
+
+            return result;
         }
     }
 }

@@ -41,17 +41,5 @@ namespace GUI_HospitalManagement
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void AddPatientButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                BUS_HospitalManagement.BUS_Dept.AddPatient(NameTextBox.Text, DOBTextBox.Text, AddressTextBox.Text, PhoneTextBox.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
     }
 }
