@@ -335,6 +335,29 @@ namespace DAO_HospitalManagement
             }
         }
 
+        public static DataTable RunQuery(string cmd)
+        {
+            OracleCommand command = new OracleCommand(cmd, _conn);
+            OracleDataAdapter adapter = new OracleDataAdapter();
+            //OracleDataReader reader;
+
+            try
+            {
+                //reader = command.ExecuteReader();
+                DataTable result = new DataTable();
+                adapter.SelectCommand = new OracleCommand(cmd, _conn);
+
+                //result.Load(reader);
+                adapter.Fill(result);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Function to lock or unlock user account
         /// </summary>

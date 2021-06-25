@@ -28,5 +28,17 @@ namespace BUS_HospitalManagement
         {
             DAO_HospitalManagement.DAO_Dept.GetAllDept();
         }
+
+        public static void AddPatient(string name, string dob, string address, string phone)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

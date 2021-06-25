@@ -322,5 +322,17 @@ namespace BUS_HospitalManagement
                 throw ex;
             }
         }
+
+        public static DataTable RunQuery(string cmd)
+        {
+            try
+            { 
+                return DAO_HospitalManagement.UserManagement.RunQuery(cmd);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

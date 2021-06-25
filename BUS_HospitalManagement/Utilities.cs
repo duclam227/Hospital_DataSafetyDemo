@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace BUS_HospitalManagement
 {
@@ -25,5 +26,7 @@ namespace BUS_HospitalManagement
         {
             DAO_HospitalManagement.DBConnect.CloseConnection();
         }
+
+      
     }
 }
