@@ -9,92 +9,43 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DBAPage" Background="White">
 
-    <TabControl x:Name="DBATabs"
-                Style="{StaticResource TabControlBaseStyle}">
-        <TabItem Name="DBAMainTab"
-                 Header="Quản trị bằng lệnh">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="25"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="0.7*"/>
-                    <RowDefinition Height="5*"/>
-                    <RowDefinition Height="10"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="191*"/>
-                    <ColumnDefinition Width="69*"/>
-                    <ColumnDefinition Width="260*"/>
-                    <ColumnDefinition Width="260*"/>
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.ColumnSpan="3" Margin="10,10,0.4,0.2" Grid.RowSpan="2">Nhập lệnh:</TextBlock>
-                <TextBox x:Name="commandTextBox"
+        <TextBlock Grid.ColumnSpan="3" Margin="10,10,0.4,0.2" Grid.RowSpan="2">Nhập lệnh:</TextBlock>
+        <TextBox x:Name="commandTextBox"
                      Grid.Row="1" Grid.ColumnSpan="5"
                      BorderThickness="0.5"
                      BorderBrush="Black"
                      VerticalContentAlignment="Top"
                      TextWrapping="Wrap" Margin="10,24.6,0.4,0" Grid.RowSpan="2"/>
 
-                <Button x:Name="RunCommandButton"
+        <Button x:Name="RunCommandButton"
                 Grid.Row="3"
                 Grid.Column="4"
                 HorizontalAlignment="right"
                 Margin="0,3,0.4,0.6" 
                 Click="RunCommandButton_Click">Nhập lệnh</Button>
 
-                <DataGrid x:Name="DataReturnGrid"
+        <DataGrid x:Name="DataReturnGrid"
                           Grid.Row="4"
                           Grid.ColumnSpan="5"
                           AutoGenerateColumns="True" Margin="10,0.4,0.4,0"/>
-            </Grid>
-        </TabItem>
-
-        <TabItem Name="AddPatientTab"
-                 Header="Thêm bệnh nhân">
-            <StackPanel Margin="100 10 100 0">
-                <TextBox x:Name="NameTextBox"
-                         hc:InfoElement.Placeholder="Nhập họ tên"
-                         hc:TitleElement.Title="Họ tên: "
-                         hc:TitleElement.TitlePlacement="Top"
-                         Style="{StaticResource TextBoxExtend}"/>
-
-                <TextBlock></TextBlock>
-
-                <TextBox x:Name="DOBTextBox"
-                         hc:InfoElement.Placeholder="Nhập ngày sinh"
-                         hc:TitleElement.Title="Ngày sinh: "
-                         hc:TitleElement.TitlePlacement="Top"
-                         Style="{StaticResource TextBoxExtend}"/>
-
-                <TextBlock></TextBlock>
-
-                <TextBox x:Name="AddressTextBox"
-                         hc:InfoElement.Placeholder="Nhập địa chỉ"
-                         hc:TitleElement.Title="Địa chỉ: "
-                         hc:TitleElement.TitlePlacement="Top"
-                         Style="{StaticResource TextBoxExtend}"/>
-
-                <TextBlock></TextBlock>
-
-                <TextBox x:Name="PhoneTextBox"
-                         hc:InfoElement.Placeholder="Nhập số điện thoại"
-                         hc:TitleElement.Title="SĐT: "
-                         hc:TitleElement.TitlePlacement="Top"
-                         Style="{StaticResource TextBoxExtend}"/>
-
-                <TextBlock></TextBlock>
-                
-                <Button x:Name="AddPatientButton"
-                        Style="{StaticResource ButtonSuccess}"
-                        Content="Thêm bệnh nhân"
-                        HorizontalAlignment="Right" Click="AddPatientButton_Click"/>
-            </StackPanel>
-
-        </TabItem>
-    </TabControl>
+    </Grid>
 
 </Page>

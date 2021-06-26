@@ -74,6 +74,15 @@ namespace GUI_HospitalManagement
                             RoleFrame.Navigate(doctor);
                             break;
                         }
+                    case "reception":
+                        {
+                            welcome += "Điều phối viên!";
+                            WelcomeTextBlock.Text = welcome;
+
+                            ReceptionPage recep = new ReceptionPage();
+                            RoleFrame.Navigate(recep);
+                            break;
+                        }
                 }
             }
         }

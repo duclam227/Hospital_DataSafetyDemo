@@ -67,6 +67,9 @@
     <Compile Include="AccountingPage.xaml.cs">
       <DependentUpon>AccountingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionPage.xaml.cs">
+      <DependentUpon>ReceptionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewDataSet.xaml.cs">
       <DependentUpon>ViewDataSet.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AccountingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReceptionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
