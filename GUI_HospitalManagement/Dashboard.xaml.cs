@@ -57,6 +57,7 @@ namespace GUI_HospitalManagement
                 switch (role)
                 {
                     case "accounting":
+                    case "ACCOUNTING":
                         {
                             welcome += "Kế toán!";
                             WelcomeTextBlock.Text = welcome;
@@ -65,6 +66,7 @@ namespace GUI_HospitalManagement
                             RoleFrame.Navigate(accounting);
                             break;
                         }
+                    case "DOCTOR":
                     case "doctor":
                         {
                             welcome += "Bác sĩ!";
@@ -74,6 +76,7 @@ namespace GUI_HospitalManagement
                             RoleFrame.Navigate(doctor);
                             break;
                         }
+                    case "RECEPTION":
                     case "reception":
                         {
                             welcome += "Điều phối viên!";

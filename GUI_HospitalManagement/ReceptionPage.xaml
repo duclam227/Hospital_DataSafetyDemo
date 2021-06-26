@@ -10,7 +10,7 @@
       Title="ReceptionPage">
 
     <TabControl>
-        <TabItem Header="Thêm bênh nhân">
+        <TabItem Header="Thêm bệnh nhân">
             <Grid Background="White">
                 <StackPanel Margin="100 10 100 0">
                     <TextBox x:Name="NameTextBox"
@@ -53,7 +53,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Xem bệnh nhân">
+        <TabItem Header="Xem bệnh nhân" Height="Auto">
             <StackPanel Margin="100 10 100 10">
                 <Button x:Name="ShowPatientButton"
                         Style="{StaticResource ButtonPrimary}"
@@ -61,15 +61,18 @@
                     Xem danh sách bệnh nhân
                 </Button>
                 <TextBlock></TextBlock>
-                <DataGrid x:Name="PatientList"
+                <ScrollViewer VerticalScrollBarVisibility="auto"
+                      Padding="10 0 10 0">
+                    <DataGrid x:Name="PatientList"
                           AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Họ tên" Binding="{Binding Name}"/>
-                        <DataGridTextColumn Header="Ngày sinh" Binding="{Binding Dob}"/>
-                        <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Address}"/>
-                        <DataGridTextColumn Header="Số điện thoại" Binding="{Binding Phone}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Họ tên" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Ngày sinh" Binding="{Binding Dob}"/>
+                            <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Address}"/>
+                            <DataGridTextColumn Header="Số điện thoại" Binding="{Binding Phone}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
             </StackPanel>
         </TabItem>
     </TabControl>

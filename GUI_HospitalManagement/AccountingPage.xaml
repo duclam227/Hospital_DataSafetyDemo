@@ -6,9 +6,57 @@
       xmlns:local="clr-namespace:GUI_HospitalManagement"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ReceptionPage" Background="White">
+      Title="ReceptionPage" Background="White" Loaded="Page_Loaded">
 
     <Grid>
-        
+        <TabControl
+            Style="{DynamicResource TabControlBaseStyle}"
+            TabStripPlacement="Left">
+            <TabItem Header="Lịch sử chi tiêu"
+                     Width="150">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Name="ExpenseHistoryGrid"
+                              Grid.Row="0"
+                              ItemsSource="{Binding}"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Ngày" 
+                                                Binding="{Binding Date}"
+                                                Width="2*"/>
+                            <DataGridTextColumn Header="Mô tả" 
+                                                Binding="{Binding Description}"
+                                                Width="3*"/>
+                            <DataGridTextColumn Header="Người mua" 
+                                                Binding="{Binding OperatorID}"
+                                                Width="1*"/>
+                            <DataGridTextColumn Header="Số tiền" 
+                                                Binding="{Binding Amount}"
+                                                Width="2*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Thông tin cá nhân">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Stretch"
+                                Grid.Row="0"/>
+                    <DataGrid Name="EmployeeInformationGrid" Grid.Row="1" 
+                              AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Page>

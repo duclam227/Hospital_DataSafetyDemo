@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aes.cs" />
+    <Compile Include="BUS_CheckupRecord.cs" />
     <Compile Include="BUS_Dept.cs" />
+    <Compile Include="BUS_Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleManagement.cs" />
     <Compile Include="UserManagement.cs" />

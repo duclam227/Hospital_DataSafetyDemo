@@ -17,18 +17,15 @@
                 <Grid>
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="40"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Stretch"
-                                Grid.Row="0"/>
-
-                    <Frame x:Name="CheckupRecordFrame"
-                           NavigationUIVisibility="Hidden"
-                           VerticalAlignment="Stretch"
-                           Grid.Row="1"/>
+                    <DataGrid Name="CheckupRecordGrid"
+                              Grid.Row="0"
+                              ItemsSource="{Binding}"
+                              AutoGenerateColumns="True"
+                              IsReadOnly="True">
+                    </DataGrid>
                 </Grid>
             </TabItem>
 
@@ -42,10 +39,7 @@
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Stretch"
                                 Grid.Row="0"/>
-                    <Frame x:Name="EmployeeInformationFrame"
-                           NavigationUIVisibility="Hidden"
-                           VerticalAlignment="Stretch"
-                           Grid.Row="1"/>
+                    <DataGrid Name="EmployeeInformationGrid" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>
